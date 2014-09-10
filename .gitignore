@@ -1,4 +1,4 @@
 *.pyc
-/settings
+/ahead/settings
 *.sqlite3
 .DS_Store
