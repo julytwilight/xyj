@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from ahead.utils.lazy import *
 
-
-def home(request):
+def default(request):
     return render(request, "index.html", {})
+
+
+def register(request):
+    return render(request, "registration/register.html")
