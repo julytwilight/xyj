@@ -1,0 +1,122 @@
+{% extends "layouts/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<!-- New Arrivals
+================================================== -->
+<div class="container">
+
+  <!-- Carousel -->
+  <div id="new-arrivals" class="showbiz-container sixteen columns" >
+
+    <!-- Products -->
+    <div class="showbiz" data-left="#showbiz_left_1" data-right="#showbiz_right_1" data-play="#showbiz_play_1" >
+      <div class="overflowholder">
+
+        <ul>
+
+          <!-- Product #1 -->
+          <li>
+            <figure class="product">
+              <div class="mediaholder">
+                <a href="variable-product-page.html">
+                  <img alt="" src="{% static 'images/shop_item_01.jpg' %}"/>
+                  <div class="cover">
+                    <img alt="" src="{% static 'images/shop_item_01_hover.jpg' %}"/>
+                  </div>
+                </a>
+                <a href="index.html#" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+              </div>
+
+              <a href="variable-product-page.html">
+                <section>
+                  <h5>Brown Mini Skirt</h5>
+                  <span class="product-price">$79.00</span>
+                </section>
+              </a>
+            </figure>
+          </li>
+
+
+          <!-- Product #2 -->
+          <li>
+            <figure class="product">
+              <div class="mediaholder">
+                <a href="variable-product-page.html">
+                  <img alt="" src="{% static 'images/shop_item_02.jpg' %}"/>
+                  <div class="cover">
+                    <img alt="" src="{% static 'images/shop_item_02_hover.jpg' %}"/>
+                  </div>
+                </a>
+                <a href="index.html#" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+              </div>
+
+              <a href="variable-product-page.html">
+                <section>
+                  <h5>Glory High Shoes</h5>
+                  <span class="product-price">$99.00</span>
+                </section>
+              </a>
+            </figure>
+          </li>
+
+
+          <!-- Product #3 -->
+          <li>
+            <figure class="product">
+              <!-- <div class="product-discount">SALE</div> -->
+              <div class="mediaholder">
+                <a href="single-product-page.html">
+                  <img alt="" src="{% static 'images/shop_item_03.jpg' %}"/>
+                  <div class="cover">
+                    <img alt="" src="{% static 'images/shop_item_03_hover.jpg' %}"/>
+                  </div>
+                </a>
+                <a href="index.html#" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+              </div>
+
+              <a href="single-product-page.html">
+                <section>
+                  <h5>Wool Two-Piece Suit</h5>
+                  <!-- <span class="product-price-discount">$499.00<i>$399.00</i></span> -->
+                  <span class="product-price">$399.00</span>
+                </section>
+              </a>
+            </figure>
+          </li>
+
+
+          <!-- Product #4 -->
+          <li>
+            <figure class="product">
+              <div class="mediaholder">
+                <a href="variable-product-page.html">
+                  <img alt="" src="{% static 'images/shop_item_04.jpg' %}"/>
+                  <div class="cover">
+                    <img alt="" src="{% static 'images/shop_item_04_hover.jpg' %}"/>
+                  </div>
+                </a>
+                <a href="index.html#" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+              </div>
+
+              <a href="variable-product-page.html">
+                <section>
+                  <h5>Vintage Stripe Jumper</h5>
+                  <span class="product-price">$49.00</span>
+                </section>
+              </a>
+            </figure>
+          </li>
+
+        </ul>
+        <div class="clearfix"></div>
+
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
