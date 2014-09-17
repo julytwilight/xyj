@@ -780,54 +780,54 @@
 
 			e.preventDefault();
 			var user_name       = $('input[name=name]').val();
-      var user_email      = $('input[name=email]').val();
-      var user_comment    = $('textarea[name=comment]').val();
+			var user_email      = $('input[name=email]').val();
+			var user_comment    = $('textarea[name=comment]').val();
 
-      //simple validation at client's end
-      //we simply change border color to red if empty field using .css()
-      var proceed = true;
-      if(user_name===""){
-					$('input[name=name]').addClass('error');
-						proceed = false;
-					}
-					if(user_email===""){
-						$('input[name=email]').addClass('error');
-						proceed = false;
-					}
-					if(user_comment==="") {
-						$('textarea[name=comment]').addClass('error');
-						proceed = false;
-					}
+		    //simple validation at client's end
+		    //we simply change border color to red if empty field using .css()
+		    var proceed = true;
+		    if(user_name===""){
+				$('input[name=name]').addClass('error');
+					proceed = false;
+				}
+				if(user_email===""){
+					$('input[name=email]').addClass('error');
+					proceed = false;
+				}
+				if(user_comment==="") {
+					$('textarea[name=comment]').addClass('error');
+					proceed = false;
+				}
 
-					//everything looks good! proceed...
-					if(proceed) {
-						$('.hide').fadeIn();
-						$("#contactform .submit").fadeOut();
-							//data to be sent to server
-							var post_data = {'userName':user_name, 'userEmail':user_email, 'userComment':user_comment};
+				//everything looks good! proceed...
+				if(proceed) {
+					$('.hide').fadeIn();
+					$("#contactform .submit").fadeOut();
+					//data to be sent to server
+					var post_data = {'userName':user_name, 'userEmail':user_email, 'userComment':user_comment};
 
-							//Ajax post data to server
-							$.post('contact.php', post_data, function(response){
-								var output;
-								//load json data from server and output comment
-								if(response.type == 'error')
-									{
-										output = '<div class="error">'+response.text+'</div>';
-										$('.hide').fadeOut();
-										$("#contactform .submit").fadeIn();
-									} else {
+					//Ajax post data to server
+					$.post('contact.php', post_data, function(response){
+						var output;
+						//load json data from server and output comment
+						if(response.type == 'error')
+						{
+							output = '<div class="error">'+response.text+'</div>';
+							$('.hide').fadeOut();
+							$("#contactform .submit").fadeIn();
+						} else {
 
-										output = '<div class="success">'+response.text+'</div>';
-										//reset values in all input fields
-										$('#contact div input').val('');
-										$('#contact textarea').val('');
-										$('.hide').fadeOut();
-										$("#contactform .submit").fadeIn().attr("disabled", "disabled").css({'backgroundColor':'#c0c0c0', 'cursor': 'default' });
-									}
-
-									$("#result").hide().html(output).slideDown();
-								}, 'json');
+							output = '<div class="success">'+response.text+'</div>';
+							//reset values in all input fields
+							$('#contact div input').val('');
+							$('#contact textarea').val('');
+							$('.hide').fadeOut();
+							$("#contactform .submit").fadeIn().attr("disabled", "disabled").css({'backgroundColor':'#c0c0c0', 'cursor': 'default' });
 						}
+
+						$("#result").hide().html(output).slideDown();
+					}, 'json');
+				}
 			});
 
 			//reset previously set border colors and hide all comment on .keyup()

@@ -12,7 +12,12 @@
   // Register Form
   //----------------------------------------//
   $('.register').submit(function(){
-    alert('aa');
+    var username = $('#reg_username').val();
+    var email = $('#reg_email').val();
+    var password = $('reg_password').val();
+    var password2 = $('reg_password2').val();
+
+    if (username === "")
     return false;
   });
 })(this.jQuery);

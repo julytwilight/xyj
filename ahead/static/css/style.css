@@ -2540,6 +2540,16 @@ blockquote {
 }
 
 
+/* Sign Form
+------------------------------------- */
+.login, .register input.error,
+.login, .registe textarea.error,
+.login, .registe select.error {
+	border: 1px solid #ffeceb;
+	background: #ffeceb;
+}
+
+
 /* Contact Form
 ------------------------------------- */
 #contact fieldset div  {
