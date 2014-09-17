@@ -6,4 +6,4 @@ def default(request):
 
 
 def register(request):
-    return render(request, "registration/lgoin.html")
+    return render(request, "registration/login.html")

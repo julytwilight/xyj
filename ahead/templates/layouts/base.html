@@ -36,10 +36,12 @@
 {% block content %}
 {% endblock %}
 {% include "layouts/_footer.html" %}
+</div>
+
 <!-- Java Script
 ================================================== -->
-<script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/knockout.js' %}"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/jquery.jpanelmenu.js' %}"></script>
 <script src="{% static 'js/jquery.themepunch.plugins.min.js' %}"></script>
 <script src="{% static 'js/jquery.themepunch.revolution.min.js' %}"></script>
@@ -61,6 +63,8 @@
 <script src="{% static 'js/puregrid.js' %}"></script>
 <script src="{% static 'js/stacktable.js' %}"></script>
 <script src="{% static 'js/custom.js' %}"></script>
-</div>
+
+{% block js %}
+{% endblock %}
 </body>
 </html>
