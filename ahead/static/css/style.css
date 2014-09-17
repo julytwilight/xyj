@@ -7169,7 +7169,7 @@ html[xmlns] .slides {display: block;}
 		line-height: 32px;
 	}
 
-	#additional-menu { display: none; }
+	/*#additional-menu { display: none; }*/
 
 	#cart { float: left; }
 
@@ -7182,7 +7182,7 @@ html[xmlns] .slides {display: block;}
 
 	.cart-list .arrow { left: 20px; }
 
-	#top-bar .social-icons { display: none; }
+	#top-bar { display: none; }
 
 	.parallax-title { font-size: 36px; }
 	.parallax-title span {

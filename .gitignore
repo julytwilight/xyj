@@ -1,5 +1,6 @@
 *.pyc
-/ahead/settings
+/ahead/settings/development.py
+/ahead/settings/production.py
 *.sqlite3
 .DS_Store
 */migrations/
