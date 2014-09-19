@@ -787,7 +787,7 @@
 		    //we simply change border color to red if empty field using .css()
 		    var proceed = true;
 		    if(user_name===""){
-				$('input[name=name]').addClass('error');
+					$('input[name=name]').addClass('error');
 					proceed = false;
 				}
 				if(user_email===""){

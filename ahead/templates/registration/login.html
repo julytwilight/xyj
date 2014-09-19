@@ -52,13 +52,13 @@
           <form method="post" class="register">{% csrf_token %}
 
             <p class="form-row form-row-wide">
-              <label for="reg_email">用户名 <span class="required">*</span><span>4-30个字符，包含英文，数字和下划线</span></label>
+              <label for="reg_username">用户名 <span class="required">*</span><span>4-30个字符，包含英文，数字和下划线</span></label>
               <input type="text" class="input-text" name="username" id="reg_username" value=""/>
             </p>
 
             <p class="form-row form-row-wide">
               <label for="reg_email">邮箱: <span class="required">*</span></label>
-              <input type="email" class="input-text" name="email" id="reg_email" value=""/>
+              <input type="text" class="input-text" name="email" id="reg_email" value=""/>
             </p>
 
             <p class="form-row form-row-wide">

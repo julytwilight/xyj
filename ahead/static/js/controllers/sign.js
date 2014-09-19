@@ -17,7 +17,15 @@
     var password = $('reg_password').val();
     var password2 = $('reg_password2').val();
 
-    if (username === "")
+    if (username === ""){
+      $('#reg_username').addClass('error');
+      return false;
+    }
+
+    if (/[\w-]+@[\w-]+.[\w]+/.test(email) === false){
+      $('#reg_email').addClass('error');
+      return false;
+    }
     return false;
   });
 })(this.jQuery);
