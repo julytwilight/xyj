@@ -2542,11 +2542,16 @@ blockquote {
 
 /* Sign Form
 ------------------------------------- */
-.login, .register input.error,
-.login, .registe textarea.error,
-.login, .registe select.error {
+.login input.error, .register input.error,
+.login textarea.error, .registe textarea.error,
+.login select.error, .registe select.error {
 	border: 1px solid #ffeceb;
 	background: #ffeceb;
+}
+
+.signinfo {
+	font-size: 12px;
+	margin-left: 10px;
 }
 
 
