@@ -13,16 +13,27 @@
     </ul>
 
     <div class="tabs-container">
+      {% if form.errors %}
+        <blockquote>
+          {% for field in form %}
+            <p>{{ field.errors }}</p>
+          {% endfor %}
+          {% for e in form.errors %}
+            {% if e == '__all__' %}<p>用户名和密码不匹配</p>{% endif %}
+          {% endfor %}
+        </blockquote>
+      {% endif %}
+
       <!-- Login -->
       <div class="tab-content" id="tab1" style="display: none;">
 
         <h3 class="headline">登陆</h3><span class="line" style="margin-bottom:20px;"></span><div class="clearfix"></div>
 
-        <form method="post" class="login">{% csrf_token %}
+        <form method="post" action="{% url 'login' %}" class="login">{% csrf_token %}
 
           <p class="form-row form-row-wide">
             <label for="username">用户名: <span class="required">*</span></label>
-            <input type="text" class="input-text" name="username" id="username" value=""/>
+            <input type="text" class="input-text" name="username" id="username" value="{% if form.username.value %}{{ form.username.value }}{% endif %}"/>
           </p>
 
           <p class="form-row form-row-wide">
@@ -53,12 +64,12 @@
 
           <p class="form-row form-row-wide">
             <label for="reg_username">用户名 <span class="required">*</span><span class="signinfo">4-30个字符，包含英文，数字和下划线</span></label>
-            <input type="text" class="input-text" name="username" id="reg_username" value=""/>
+            <input type="text" class="input-text" name="username" id="reg_username" value="{% if form.username.value %}{{ form.username.value }}{% endif %}"/>
           </p>
 
           <p class="form-row form-row-wide">
             <label for="reg_email">邮箱: <span class="required">*</span></label>
-            <input type="text" class="input-text" name="email" id="reg_email" value=""/>
+            <input type="text" class="input-text" name="email" id="reg_email" value="{% if form.email.value %}{{ form.email.value }}{% endif %}"/>
           </p>
 
           <p class="form-row form-row-wide">

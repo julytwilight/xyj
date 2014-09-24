@@ -5,6 +5,7 @@ from django import forms
 
 from .models import User
 
+
 class RegisterForm(forms.ModelForm):
     error_messages = {
         'duplicate_username': _("A user with that username already exists."),

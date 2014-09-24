@@ -32,9 +32,9 @@
       return false;
     };
 
-    // if (password != password2) {
-    //   $('#reg_password2').addClass('error');
-    //   return false;
-    // }
+    if (password != password2) {
+      $('#reg_password2').addClass('error');
+      return false;
+    }
   });
 })(this.jQuery);

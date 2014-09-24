@@ -38,6 +38,7 @@ INSTALLED_APPS = (
 
     # myapp
     'ahead',
+    'guys',
     'shops',
 )
 
@@ -93,8 +94,18 @@ STATIC_URL = '/static/'
 ##################
 # AUTHENTICATION #
 ##################
-AUTH_USER_MODEL = 'ahead.User'
+AUTH_USER_MODEL = 'guys.User'
 LOGIN_REDIRECT_URL = "home"
 LOGIN_URL = "login"
 LOGOUT_URL = "logout"
 # LOGIN_REDIRECT_URL = '/accounts/profile/'
+
+
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+)
