@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     url(r'^$', 'ahead.views.home', name='home'),
 
     url(r'^whatsup/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^seeyou/$', 'django.contrib.auth.views.logout', name='logout'),
+    url(r'^seeyou/$', 'guys.views.accounts.logout', name='logout'),
     url(r'^welcome/$', RegisterView.as_view(), name='register'),
 
     url(r'^', include('shops.urls')),

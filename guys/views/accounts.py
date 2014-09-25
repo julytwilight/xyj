@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.views.generic import View
-
+from django.contrib.auth.views import logout_then_login
 from ahead.utils.lazy import *
 from ..forms import RegisterForm
 
@@ -16,3 +16,7 @@ class RegisterView(View):
             pass
 
         return render(request, "registration/login.html", {'form': form})
+
+
+def logout(request):
+    return logout_then_login(request, '/')
