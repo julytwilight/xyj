@@ -22,6 +22,7 @@ class RegisterForm(forms.ModelForm):
 
     password1 = forms.CharField(label=_("Password"), min_length=6)
     password2 = forms.CharField(label=_("Password"), min_length=6)
+    id = forms.IntegerField(widget=forms.widgets.HiddenInput())
 
 
     class Meta:

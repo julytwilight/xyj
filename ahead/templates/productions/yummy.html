@@ -1,0 +1,90 @@
+{% extends "layouts/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container">
+
+<!-- Slider
+================================================== -->
+  <div class="eight columns" >
+    <div class="slider-padding">
+      <div id="product-slider" class="royalSlider rsDefault">
+          <img class="rsImg" src="{% static 'images/product_item_01a.jpg' %}" data-rsTmb="{% static 'images/product_item_01a1-96x105.jpg' %}" alt="" />
+          <img class="rsImg" src="{% static 'images/product_item_02a.jpg' %}" data-rsTmb="{% static 'images/product_item_01hover1-96x105.jpg' %}" alt="" />
+       </div>
+       <div class="clearfix"></div>
+    </div>
+  </div>
+
+
+<!-- Content
+================================================== -->
+  <div class="eight columns">
+    <div class="product-page">
+      
+      <!-- Headline -->
+      <section class="title">
+        <h2>熙鱿记鱿鱼条</h2>
+        <span class="product-price">￥39.00</span>
+      </section>
+
+      <!-- Text Parapgraph -->
+      <section>
+        <p class="margin-reset">
+          鱿鱼，也称柔鱼、枪乌贼，营养价值很高，是名贵的海产品。鱿鱼功效：鱿鱼除了富含蛋白质及人体所需的氨基酸外，还是含有大量牛磺酸的一种低热量食品物。可抑制血中的胆固醇含量，预防成人病，缓解疲劳，恢复视力，改善肝脏功能。其含的多肽和硒等微量元素有抗病毒、抗射线作用。中医认为，鱿鱼有滋阴养胃、补虚润肤的功能。 
+        </p>
+
+        <!-- Share Buttons -->  
+        <div class="share-buttons">
+          <ul>
+            <li><a href="variable-product-page.html#">Share</a></li>
+            <li class="share-facebook"><a href="variable-product-page.html#">Facebook</a></li>
+            <li class="share-twitter"><a href="variable-product-page.html#">Twitter</a></li>
+            <li class="share-gplus"><a href="variable-product-page.html#">Google Plus</a></li>
+            <li class="share-pinit"><a href="variable-product-page.html#">Pin It</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </section>
+
+      <!-- Variables -->
+      <section class="variables">
+
+        <div class="four alpha columns">
+          <label for="size">Size</label>
+          <select id="size" name="size">
+            <option>200</option>
+          </select>
+        </div>
+
+        <div class="four omega columns">
+          <label for="color">Color</label>
+          <select id="color" name="color">
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Red</option>
+          </select>
+        </div>
+        <div class="clearfix"></div>
+
+      </section>
+
+
+      <section class="linking">
+
+          <form action='#'>
+              <div class="qtyminus"></div>
+              <input type='text' name="quantity" value='1' class="qty" />
+              <div class="qtyplus"></div>
+          </form>
+
+          <a href="variable-product-page.html#" class="button adc">Add to Cart</a>
+          <div class="clearfix"></div>
+
+      </section>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
