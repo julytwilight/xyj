@@ -7454,3 +7454,10 @@ only screen and (min-device-pixel-ratio: 2) {
 	}
 	
 	@media only screen and (max-width: 1024px) {#style-switcher {display: none;}}
+
+
+	/* Ting Yee
+------------------------------------- */
+.customSelect .selectedValue {
+	cursor: auto;
+}

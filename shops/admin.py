@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import Production
 
-# Register your models here.
+
+class ProductionAdmin(admin.ModelAdmin):
+    list_display = ('name', 'price', 'num')
+
+
+admin.site.register(Production, ProductionAdmin)

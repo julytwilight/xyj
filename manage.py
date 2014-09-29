@@ -3,7 +3,12 @@ import os
 import sys
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ahead.settings")
+    DEBUG = True
+
+    if DEBUG:
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ahead.settings.development")
+    else:
+        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ahead.settings.production")
 
     from django.core.management import execute_from_command_line
 

@@ -15,28 +15,30 @@
       <div class="overflowholder">
 
         <ul>
-          <!-- Product #1 -->
-          <li>
-            <figure class="product">
-              <div class="product-discount">热卖</div>
-              <div class="mediaholder">
-                <a href="{% url 'productions-detail' %}">
-                  <img alt="" src="{% static 'images/shop_item_01.jpg' %}"/>
-                  <div class="cover">
-                    <img alt="" src="{% static 'images/shop_item_01_hover.jpg' %}"/>
-                  </div>
-                </a>
-                <a href="index.html#" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
-              </div>
+          {% for p in productions %}
+            <!-- Product -->
+            <li>
+              <figure class="product">
+                <div class="product-discount">热卖</div>
+                <div class="mediaholder">
+                  <a href="{% url 'productions-detail' %}">
+                    <img alt="" src="{{ p.pic1.url }}"/>
+                    <div class="cover">
+                      <img alt="" src="{{ p.pic2.url }}"/>
+                    </div>
+                  </a>
+                  <a href="index.html#" class="product-button"><i class="fa fa-shopping-cart"></i> Add to Cart</a>
+                </div>
 
-              <a href="{% url 'productions-detail' %}">
-                <section>
-                  <h5>原味鱿鱼条</h5>
-                  <span class="product-price">￥20.00</span>
-                </section>
-              </a>
-            </figure>
-          </li>
+                <a href="{% url 'productions-detail' %}">
+                  <section>
+                    <h5>{{ p.name }}</h5>
+                    <span class="product-price">￥{{ p.price }}</span>
+                  </section>
+                </a>
+              </figure>
+            </li>
+          {% endfor %}
 
 
           <!-- Product #2 -->
