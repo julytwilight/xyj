@@ -8,5 +8,6 @@ def index(request):
     return render(request, "productions/index.html", {'productions': productions})
 
 
-def detail(request):
-    return render(request, "productions/yummy.html")
+def detail(request, id):
+    production = get_object_or_404(Production, id=id)
+    return render(request, "productions/yummy.html", {'production': production})

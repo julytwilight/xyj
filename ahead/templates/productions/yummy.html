@@ -9,8 +9,8 @@
   <div class="eight columns" >
     <div class="slider-padding">
       <div id="product-slider" class="royalSlider rsDefault">
-          <img class="rsImg" src="{% static 'images/product_item_01a.jpg' %}" data-rsTmb="{% static 'images/product_item_01a1-96x105.jpg' %}" alt="" />
-          <img class="rsImg" src="{% static 'images/product_item_02a.jpg' %}" data-rsTmb="{% static 'images/product_item_01hover1-96x105.jpg' %}" alt="" />
+          <img class="rsImg" width="440" height="497" src="{{ production.pic1.url }}" data-rsTmb="{{ production.pic1_96x165.url }}" alt="" />
+          <img class="rsImg" src="{{ production.pic2.url }}" data-rsTmb="{{ production.pic2_95x165.url }}" alt="" />
        </div>
        <div class="clearfix"></div>
     </div>
@@ -24,15 +24,13 @@
 
       <!-- Headline -->
       <section class="title">
-        <h2>熙鱿记鱿鱼条</h2>
-        <span class="product-price">￥39.00</span>
+        <h2>{{ production.name }}</h2>
+        <span class="product-price">￥{{ production.price }}</span>
       </section>
 
       <!-- Text Parapgraph -->
       <section>
-        <p class="margin-reset">
-          鱿鱼，也称柔鱼、枪乌贼，营养价值很高，是名贵的海产品。鱿鱼功效：鱿鱼除了富含蛋白质及人体所需的氨基酸外，还是含有大量牛磺酸的一种低热量食品物。可抑制血中的胆固醇含量，预防成人病，缓解疲劳，恢复视力，改善肝脏功能。其含的多肽和硒等微量元素有抗病毒、抗射线作用。中医认为，鱿鱼有滋阴养胃、补虚润肤的功能。 
-        </p>
+        <p class="margin-reset">{{ production.introduction }}</p>
 
         <!-- Share Buttons -->  
         <div class="share-buttons">
@@ -50,20 +48,20 @@
       <!-- Variables -->
       <section class="variables">
 
-        <div class="four alpha columns">
+        <!-- <div class="four alpha columns">
           <label for="size">重量</label>
           <div id="select-size" class="customSelect" style="z-index: 100;">
             <div class="selectValueWrap">
-              <div class="selectedValue">200g</div>
+              <div class="selectedValue">{{ production.weight }}g</div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="four omega columns">
           <label for="color">保质期</label>
           <div id="select-size" class="customSelect" style="z-index: 100;">
             <div class="selectValueWrap">
-              <div class="selectedValue">6个月</div>
+              <div class="selectedValue">{{ production.guarantee }}个月</div>
             </div>
           </div>
         </div>

@@ -22,7 +22,6 @@ class RegisterForm(forms.ModelForm):
 
     password1 = forms.CharField(label=_("Password"), min_length=6)
     password2 = forms.CharField(label=_("Password"), min_length=6)
-    id = forms.IntegerField(widget=forms.widgets.HiddenInput())
 
 
     class Meta:
@@ -65,7 +64,7 @@ class RegisterForm(forms.ModelForm):
         return password2
 
     def save(self, commit=True):
-        user = super(UserCreationForm, self).save(commit=False)
+        user = super(RegisterForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
         if commit:
             user.save()
