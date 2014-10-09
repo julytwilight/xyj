@@ -20,18 +20,26 @@ function setCookie(c_name,value,expiredays) {
 }
 
 function CartsViewModel() {
-  this.items = [];
+  this.items = ko.observable({});
   this.sign = '￥';
   this.money = ko.observable(0);
+  this.len = ko.observable(0);
   this.getPrice = function() {
     if (this.itemsLength() < 1) {
       return 0;
     }
   }
+
   this.itemsLength = function() {
-    return this.items.length;
+    this.len = this.items.length;
   }
-  this.addCart = function(id, img, price, num) {
+
+  this.addCart = function(id, name, img, price, num) {
+    if (this.items[id]) {
+      this.items[id]['num'] += parseInt(num);
+    } else {
+      this.items[id] = {'name':name, 'img': img, 'price': price, 'num': num};
+    }
   }
 }
 
