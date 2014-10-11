@@ -27,7 +27,7 @@
                       <img alt="" src="{{ p.pic2.url }}"/>
                     </div>
                   </a>
-                  <a href="#" class="product-button" data-bind="addCart({{ p.id }}, '{{ p.name }}', '{{ p.pic1 }}', {{ p.price }}, 1)">
+                  <a href="#" class="product-button" onclick="cartTools.addCart({{ p.id }}, '{{ p.name }}', '{{ p.pic1 }}', {{ p.price }}, 1)">
                     <i class="fa fa-shopping-cart"></i> Add to Cart
                   </a>
                 </div>

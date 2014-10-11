@@ -17,7 +17,7 @@ var cartTools = {
   },
 
   addCarts: function(id, name, pic, price, num) {
-    
+    console.log('');
   },
 
   emptyCarts: function() {
