@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="boxed">
+<body class="boxed" onload="cartTools.setMoney()">
 <div id="wrapper">
 
 
@@ -64,7 +64,6 @@
 <script src="{% static 'js/stacktable.js' %}"></script>
 <script src="{% static 'js/custom.js' %}"></script>
 <script src="{% static 'js/neatpath.js' %}"></script>
-<script src="{% static 'js/controllers/common.js' %}"></script>
 <script src="{% static 'js/controllers/carts.js' %}"></script>
 {% block js %}
 {% endblock %}
