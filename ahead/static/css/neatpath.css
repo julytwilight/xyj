@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------------- */
+/* Header
+---------------------------------------------------------------------- */
+/* Header Icon Styles */
+#top-bar .social-icons {
+	float: left;
+}
+
+/* User Login/Register */
+.user-state {
+	float: right;
+	margin-top: 10px;
+	font-size: 13px;
+	color: #e84a62;
+}
+.user-state a:hover {
+	color: #e84a62;
+	text-decoration: underline;
+};
