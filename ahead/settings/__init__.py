@@ -40,6 +40,9 @@ INSTALLED_APPS = (
     'ahead',
     'guys',
     'shops',
+
+    # third app
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -128,3 +131,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
 )
+
+
+# Django Rest Framework
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}

@@ -11,4 +11,7 @@ urlpatterns = patterns('',
     url(r'^', include('shops.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+
+    # Django Rest Framework
+    url(r'^api/', include('rest_framework.urls', namespace='rest_framework')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
